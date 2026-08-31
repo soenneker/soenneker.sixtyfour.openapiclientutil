@@ -6,12 +6,12 @@ using Soenneker.Sixtyfour.OpenApiClientUtil.Abstract;
 namespace Soenneker.Sixtyfour.OpenApiClientUtil.Registrars;
 
 /// <summary>
-/// Registers the OpenAPI client utility for dependency injection.
+/// Registers the lazily initialized Sixtyfour API client.
 /// </summary>
 public static class SixtyfourOpenApiClientUtilRegistrar
 {
     /// <summary>
-    /// Adds <see cref="SixtyfourOpenApiClientUtil"/> as a singleton service. <para/>
+    /// Adds the Sixtyfour API client utility as a singleton service. <para/>
     /// </summary>
     public static IServiceCollection AddSixtyfourOpenApiClientUtilAsSingleton(this IServiceCollection services)
     {
@@ -22,7 +22,7 @@ public static class SixtyfourOpenApiClientUtilRegistrar
     }
 
     /// <summary>
-    /// Adds <see cref="SixtyfourOpenApiClientUtil"/> as a scoped service. <para/>
+    /// Adds the Sixtyfour API client utility as a scoped service backed by the singleton HTTP client provider. <para/>
     /// </summary>
     public static IServiceCollection AddSixtyfourOpenApiClientUtilAsScoped(this IServiceCollection services)
     {
