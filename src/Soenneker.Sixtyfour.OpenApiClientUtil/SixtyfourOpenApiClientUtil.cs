@@ -12,6 +12,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.Sixtyfour.OpenApiClientUtil;
 
+/// <inheritdoc cref="ISixtyfourOpenApiClientUtil" />
 public sealed class SixtyfourOpenApiClientUtil : ISixtyfourOpenApiClientUtil
 {
     private readonly AsyncSingleton<SixtyfourOpenApiClient> _client;
